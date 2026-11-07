@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurio - Documentos NFT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="modal-login" id="modalLogin">
+
+    <div class="form-login">
+
+        <button class="fechar-login" id="fecharLogin">×</button>
+
+        <div class="login-abas">
+            <button class="aba-login ativo" data-form="entrar">
+                Entrar
+            </button>
+
+            <span>|</span>
+
+            <button class="aba-login" data-form="criar">
+                Criar conta
+            </button>
+        </div>
+
+        <p class="descricao-login">
+            Entre para gerenciar sua carteira, coleção e perfil de criador.
+        </p>
+
+        <form id="formLogin">
+
+            <input
+                type="email"
+                placeholder="contato@email.com"
+                required
+            >
+
+            <div class="campo-senha">
+                <input
+                    type="password"
+                    id="senha"
+                    placeholder="Digite sua senha"
+                    required
+                >
+
+                <button type="button" id="mostrarSenha">
+                    ◉
+                </button>
+            </div>
+
+            <a href="#" class="esqueceu-senha">
+                Esqueceu a senha?
+            </a>
+
+            <button type="submit" class="btn-login">
+                Entrar
+            </button>
+
+        </form>
+
+        <div class="divisor-login">
+            <span>Ou continue com</span>
+        </div>
+
+        <button class="login-social">
+            Continuar com Google
+        </button>
+
+        <button class="login-social">
+            Continuar com Facebook
+        </button>
+
+    </div>
+
+</div>
+<body>
+    <header class="top-inicio">
+        <a class="logo" href="#">KURIO</a>
+        <nav class="menu" aria-label="Principal">
+        <a href="inicio.html" class="ativo">Início</a>
+        <a href="#">Mercado</a>
+        <a href="#">Criadores</a>
+        <a href="#">Aprenda</a>
+    </nav>
+    <div class="acoes">
+      <button class="icone"><img src="icons/Search.svg" alt=""></button>
+      <button class="icone"><img src="icons/Shop.svg" alt=""></button>
+      <button class="btn">Entrar</button>
+    </div>
+    </header>
+    <main class="layout" id="catalogo">
+    <aside class="filtros" aria-label="Filtros">
+      <h2>Coleções</h2>
+      <ul id="colecoes"></ul>
+    
+      <h2>Faixa de preço</h2>
+      <label for="preco">Preço máximo: <output id="precoSaida">2.50</output> ETH</label>
+      <input type="range" id="preco" min="0.5" max="2.5" step="0.05" value="2.5">
+
+      <h2>Rede</h2>
+      <ul class="redes">
+        <li>Ethereum <span>(119)</span></li>
+        <li>Polygon <span>(78)</span></li>
+        <li>Solana <span>(33)</span></li>
+      </ul>
+
+      <div class="destaque">
+        <p class="pequeno">NFT em destaque</p>
+        <strong>OFERTA LIMITADA</strong>
+        <img src="img/destaque.png" alt="Macaco cinza com chapéu verde e moletom roxo">
+      </div>
+    </aside>
+
+    <section class="catalogo">
+      <div class="barra">
+        <div class="abas" role="tablist">
+          <button class="aba ativo">Todas as NFTs</button>
+          <button class="aba">Novos lançamentos</button>
+          <button class="aba">Em alta</button>
+        </div>
+        <label>Ordenar por:
+          <select id="ordem">
+            <option value="recente">Listados recentemente</option>
+            <option value="menor">Menor preço</option>
+            <option value="maior">Maior preço</option>
+          </select>
+        </label>
+      </div>
+
+      <input type="search" id="busca" placeholder="Buscar NFT pelo nome" aria-label="Buscar NFT pelo nome">
+      <ul class="grade" id="grade" aria-live="polite"></ul>
+      <p id="vazio" class="vazio" hidden>Nenhum NFT encontrado com esses filtros.</p>
+      <nav class="paginacao" id="paginacao" aria-label="Paginação"></nav>
+    </section>
+  </main>
+
+  <section class="banners">
+    <article class="banner">
+      <img src="img/banner-1.png" alt="Macaco de óculos e jaqueta verde">
+      <div>
+        <h3>Lançamentos gênesis de edição limitada</h3>
+        <p>Coleções exclusivas de criadores já consagrados.</p>
+        <button class="btn">Explorar →</button>
+      </div>
+    </article>
+    <article class="banner">
+        <img src="img/nft-3.png" alt="Macaco chique">
+      <div>
+        <h3>Lançamentos gênesis de edição limitada</h3>
+        <p>Coleções exclusivas de criadores já consagrados.</p>
+        <button class="btn">Explorar →</button>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <article class="banner-diario">
+        <h2>Diário de Cunhagem</h2>
+        <p>Histórias, guias e insights para colecionadores sobre o universo da propriedade digital</p>
+        <div class="cards-diario">
+            
+        </div>
+    </article>
+ </section>
+
+  <footer class="rodape">
+    <p>© 2026 Kurio. Propriedade digital para todos.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
